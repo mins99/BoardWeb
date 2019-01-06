@@ -2,14 +2,14 @@ package polymorphism;
 
 public class AppleSpeaker implements Speaker {
 	public AppleSpeaker() {
-		System.out.println("===> AppleSpeaker °´Ã¼ »ı¼º");
+		System.out.println("===> AppleSpeaker ê°ì²´ ìƒì„±");
 	}
 
 	public void volumeUp() {
-		System.out.println("AppleSpeaker---¼Ò¸® ¿Ã¸°´Ù.");
+		System.out.println("AppleSpeaker---ì†Œë¦¬ ì˜¬ë¦°ë‹¤.");
 	}
 
 	public void volumeDown() {
-		System.out.println("AppleSpeaker---¼Ò¸® ³»¸°´Ù.");
+		System.out.println("AppleSpeaker---ì†Œë¦¬ ë‚´ë¦°ë‹¤.");
 	}
 }
