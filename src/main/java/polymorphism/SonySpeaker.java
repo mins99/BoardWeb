@@ -2,14 +2,14 @@ package polymorphism;
 
 public class SonySpeaker implements Speaker{
 	public SonySpeaker() {
-		System.out.println("===> SonySpeaker °´Ã¼ »ı¼º");
+		System.out.println("===> SonySpeaker ê°ì²´ ìƒì„±");
 	}
 
 	public void volumeUp() {
-		System.out.println("SonySpeaker---¼Ò¸® ¿Ã¸°´Ù.");
+		System.out.println("SonySpeaker---ì†Œë¦¬ ì˜¬ë¦°ë‹¤.");
 	}
 
 	public void volumeDown() {
-		System.out.println("SonySpeaker---¼Ò¸® ³»¸°´Ù.");
+		System.out.println("SonySpeaker---ì†Œë¦¬ ë‚´ë¦°ë‹¤.");
 	}
 }

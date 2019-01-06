@@ -5,25 +5,25 @@ public class SamsungTV implements TV {
 	private int price;
 
 	public SamsungTV() {
-		System.out.println("===> SamsungTV(1) °´Ã¼ »ı¼º");
+		System.out.println("===> SamsungTV(1) ê°ì²´ ìƒì„±");
 	}
 
 	public void setSpeaker(Speaker speaker) {
-		System.out.println("===> setSpeaker() È£Ãâ");
+		System.out.println("===> setSpeaker() È£ï¿½ï¿½");
 		this.speaker = speaker;
 	}
 
 	public void setPrice(int price) {
-		System.out.println("===> setPrice() È£Ãâ");
+		System.out.println("===> setPrice() È£ï¿½ï¿½");
 		this.price = price;
 	}
 
 	public void powerOn() {
-		System.out.println("SamsungTV---Àü¿ø ÄÒ´Ù. (°¡°İ : " + price + ")");
+		System.out.println("SamsungTV---ì „ì› ì¼ ë‹¤. (ï¿½ï¿½ï¿½ï¿½ : " + price + ")");
 	}
 
 	public void powerOff() {
-		System.out.println("SamsungTV---Àü¿ø ²ö´Ù.");
+		System.out.println("SamsungTV---ì „ì› ëˆë‹¤.");
 	}
 
 	public void volumeUp() {

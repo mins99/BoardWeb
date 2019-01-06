@@ -6,17 +6,15 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class TVUser {
 
 	public static void main(String[] args) {
-		// 1. Spring ÄÁÅ×ÀÌ³Ê¸¦ ±¸µ¿ÇÑ´Ù.
+		// 1. Spring ì»¨í…Œì´ë„ˆ êµ¬ë™
 		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml");
 
-		// 2. Spring ÄÁÅ×ÀÌ³Ê·ÎºÎÅÍ ÇÊ¿äÇÑ °´Ã¼¸¦ ¿äÃ»(Lookup)ÇÑ´Ù.
+		// 2. Spring ì»¨í…Œì´ë„ˆë¡œë¶€í„° í•„ìš”í•œ ê°ì²´ ìš”ì²­
 		TV tv = (TV) factory.getBean("tv");
-		tv.powerOn();
-		tv.volumeUp();
-		tv.volumeDown();
-		tv.powerOff();
+		TV tv2 = (TV) factory.getBean("tv");
+		TV tv3 = (TV) factory.getBean("tv");
 
-		// 3. Spring ÄÁÅ×ÀÌ³Ê¸¦ Á¾·áÇÑ´Ù.
+		// 3. Spring ì»¨í…Œì´ë„ˆ ì¢…ë£Œ
 		factory.close();
 	}
 }
