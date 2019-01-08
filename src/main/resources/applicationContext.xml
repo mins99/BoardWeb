@@ -10,4 +10,33 @@
 	
 	<bean id="sony" class="polymorphism.SonySpeaker"/>
 	<bean id="apple" class="polymorphism.AppleSpeaker"/>
+	
+	<bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">
+		<property name="addressList">
+		<!--  list, set  -->
+			<!-- <list>
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 성수동</value>
+				<value>서울시 성동구 성수동</value>
+			</list> -->
+			
+			<!-- map -->
+			<!-- <map>
+				<entry>
+					<key><value>박지훈</value></key>
+					<value>서울시 강남구 역삼동</value>
+				</entry>
+				<entry>
+					<key><value>김민석</value></key>
+					<value>서울시 강동구 성수동</value>
+				</entry>
+			</map> -->
+			
+			<!--  properties  -->
+			<props>
+				<prop key="박지훈">서울시 강남구 역삼동</prop>
+				<prop key="김민석">서울시 강동구 성수동</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
