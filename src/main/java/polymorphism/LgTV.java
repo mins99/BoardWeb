@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component("tv")
 public class LgTV implements TV{
 	@Autowired
-	@Qualifier("apple")	// 동일 type autowired시 구분하기 위해 사용
+	// @Qualifier("apple")	// 동일 type autowired시 구분하기 위해 사용
 	/*@Resource(name="apple")*/
 	private Speaker speaker;
 	public LgTV() {

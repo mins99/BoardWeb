@@ -8,8 +8,12 @@
 	<context:component-scan base-package="polymorphism"></context:component-scan>
 	
 	<bean class="polymorphism.LgTV"></bean>
+	<context:component-scan base-package="polymorphism"/>
+	<bean class="polymorphism.SonySpeaker"/>
+	<!-- <bean class="polymorphism.AppleSpeaker"/> -->
 	
-	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
+	<!-- <bean id="sony" class="polymorphism.SonySpeaker"></bean> -->
+	
 	<!-- <bean id="tv" class="polymorphism.SamsungTV">
 		<property name="speaker" ref="apple"/>
 		<property name="price" value="2700000"></property>
