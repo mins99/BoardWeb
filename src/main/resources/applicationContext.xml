@@ -53,9 +53,9 @@
 		</property>
 	</bean> -->
 	
-	<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
+	<!-- <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
 		<property name="userDAO" ref="userDAO"/>
 	</bean>
 	
-	<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"/>
+	<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"/> -->
 </beans>
