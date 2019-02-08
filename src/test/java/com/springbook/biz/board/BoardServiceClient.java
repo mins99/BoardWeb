@@ -15,9 +15,9 @@ public class BoardServiceClient {
 
 		// 3. 글 등록 기능 테스트
 		BoardVO vo = new BoardVO();
-		vo.setTitle("임시 제목");
-		vo.setWriter("박지훈");
-		vo.setContent("임시 내용..............");
+		vo.setTitle("박지훈은....");
+		vo.setWriter("MAY");
+		vo.setContent("대존잘........");
 		boardService.insertBoard(vo);
 
 		// 4. 글 목록 검색 기능 테스트
