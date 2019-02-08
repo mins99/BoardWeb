@@ -2,60 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
 
 
 	<context:component-scan base-package="com.springbook.biz"></context:component-scan>
-	<!-- <context:component-scan base-package="polymorphism"></context:component-scan>
 	
-	<bean class="polymorphism.LgTV"></bean>
-	<context:component-scan base-package="polymorphism"/>
-	<bean class="polymorphism.SonySpeaker"/> -->
-	<!-- <bean class="polymorphism.AppleSpeaker"/> -->
-	
-	<!-- <bean id="sony" class="polymorphism.SonySpeaker"></bean> -->
-	
-	<!-- <bean id="tv" class="polymorphism.SamsungTV">
-		<property name="speaker" ref="apple"/>
-		<property name="price" value="2700000"></property>
-	</bean>
-	
-	<bean id="sony" class="polymorphism.SonySpeaker"/>
-	<bean id="apple" class="polymorphism.AppleSpeaker"/> -->
-	
-	<!--  <bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">
-		<property name="addressList">
-		// list, set 
-			<list>
-				<value>서울시 강남구 역삼동</value>
-				<value>서울시 성동구 성수동</value>
-				<value>서울시 성동구 성수동</value>
-			</list>
-			
-		//	map
-			<map>
-				<entry>
-					<key><value>박지훈</value></key>
-					<value>서울시 강남구 역삼동</value>
-				</entry>
-				<entry>
-					<key><value>김민석</value></key>
-					<value>서울시 강동구 성수동</value>
-				</entry>
-			</map>
-			
-		//	 properties 
-			 <props>
-				<prop key="박지훈">서울시 강남구 역삼동</prop>
-				<prop key="김민석">서울시 강동구 성수동</prop>
-			</props> 
-		</property>
-	</bean> -->
-	
-	<!-- <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
-		<property name="userDAO" ref="userDAO"/>
-	</bean>
-	
-	<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"/> -->
+	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
+	<aop:config>
+		<aop:pointcut expression="execution(* com.springbook.biz..*Impl.*(..))" id="allPointcut"/>
+		<aop:aspect ref="log">
+			<aop:before pointcut-ref="allPointcut" method="printLog"/>
+		</aop:aspect>
+	</aop:config>
 </beans>
