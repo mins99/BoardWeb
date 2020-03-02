@@ -21,6 +21,9 @@
 		</aop:aspect>
 	</aop:config>
 	
+	<!-- 어노테이션 설정 -->
+	<aop:aspectj-autoproxy />
+	
 	<!-- DataSource 설정 -->
 	<context:property-placeholder location="classpath:config/database.properties"/>
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
