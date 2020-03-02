@@ -11,6 +11,7 @@ import com.springbook.biz.common.Log4jAdvice;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
+	// JdbcDaoSupport 의존성 주입 방법
 	@Autowired
 	private BoardDAOSpring boardDAO;
 
