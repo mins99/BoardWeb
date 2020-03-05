@@ -65,7 +65,7 @@
 ```    
 
 
-##4.4 컬렉션(Collection) 객체 설정
+## 4.4 컬렉션(Collection) 객체 설정
 | Collection | Element |
 | ------ | ----------- |
 | java.util.List, Arrays | `<list>` |
