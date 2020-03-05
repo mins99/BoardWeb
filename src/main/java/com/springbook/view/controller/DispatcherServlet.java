@@ -2,13 +2,22 @@ package com.springbook.view.controller;
 
 import java.io.IOException;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
 public class DispatcherServlet extends HttpServlet{
-	private static final long serialVersionUID = 1L;
+	private String contextConfigLocation;
+	
+	public void init(ServletConfig config) throws ServletException {
+		contextConfigLocation = config.getInitParameter("contextConfigLocation");
+		new XmlWebApplicationContext();
+	}
+	/* private static final long serialVersionUID = 1L;
 	private HandlerMapping handlerMapping;
 	private ViewResolver viewResolver;
 	
@@ -49,5 +58,5 @@ public class DispatcherServlet extends HttpServlet{
 					
 		// 5. 검색된 화면으로 이동한다.
 		response.sendRedirect(view);
-	}
+	} */
 }
