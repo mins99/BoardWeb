@@ -37,7 +37,7 @@
 			</tr>
 			<c:forEach items="${boardList }" var="board">
 			<tr>
-				<td>${board.getSeq()}</td>
+				<td>${board.seq}</td>
 				<td align="left"><a href="getBoard.do?seq=${board.seq}">
 						${board.title}</a></td>
 				<td>${board.writer}</td>
