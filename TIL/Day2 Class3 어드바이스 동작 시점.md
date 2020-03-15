@@ -56,7 +56,7 @@ public class AfterReturningAdvice {
 <bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"/>
 
 <aop:config>
-    <aop:pointcut id="getPointcut" expression="execution(*com.springbook.biz..*Impl.get*(..))" />
+    <aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" />
     
     <aop:aspect ref="afterReturning">
         <aop:after-returning pointcut-ref="getPointcut" method="afterLog"/>
