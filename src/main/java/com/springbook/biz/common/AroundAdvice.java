@@ -9,7 +9,7 @@ import org.springframework.util.StopWatch;
 @Aspect
 public class AroundAdvice {
 	
-	@Pointcut("execution(*com.springbook.biz..*Impl.*(..))")
+	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
 	public void allPointcut() {}
 	
 	@Around("allPointcut()")

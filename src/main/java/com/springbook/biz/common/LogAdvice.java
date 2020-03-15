@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 @Aspect
 public class LogAdvice {
 	
-	@Pointcut("execution(*com.springbook.biz..*Impl.*(..))")
+	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
 	public void allPointcut(){}
 	
-	@Pointcut("execution(*com.springbook.biz..*Impl.get*(..))")
+	@Pointcut("execution(* com.springbook.biz..*Impl.get*(..))")
 	public void getPointcut(){}
 	
 	// allPointcut 메소드 실행 전 실행

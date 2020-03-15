@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
-import com.springbook.biz.common.Log4jAdvice;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {

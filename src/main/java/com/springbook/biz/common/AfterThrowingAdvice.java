@@ -4,16 +4,11 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Service;
 
-import com.springbook.biz.user.UserVO;
-
 @Service
 @Aspect
 public class AfterThrowingAdvice {
-		
-	@Pointcut("execution(*com.springbook.biz..*Impl.*(..))")
-	public void allPointcut() {}
 	
-	@AfterThrowing(pointcut="allPointcut()", throwing="expectObj")
+	@AfterThrowing(pointcut="PointcutCommon.allPointcut()", throwing="exceptObj")
 	public void exceptionLog(JoinPoint jp, Exception exceptObj) {
 		String method = jp.getSignature().getName();
 		System.out.println(method + "() 메소드 수행 중 예외 발생!");

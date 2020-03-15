@@ -10,7 +10,7 @@ import com.springbook.biz.user.UserVO;
 @Aspect
 public class AfterReturningAdvice {
 		
-	@Pointcut("execution(*com.springbook.biz..*Impl.get*(..))")
+	@Pointcut("execution(* com.springbook.biz..*Impl.get*(..))")
 	public void getPointcut() { }
 	
 	@AfterReturning(pointcut="getPointcut()", returning="returnObj")
