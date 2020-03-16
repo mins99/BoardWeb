@@ -3,6 +3,7 @@ package com.springbook.view.user;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,14 +20,19 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
-	public String login(UserVO vo, UserDAO userDAO, HttpSession session) {
+	public String login(UserVO vo, UserDAO userDAO, HttpSession session, Model model) {
 		System.out.println("로그인 인증 처리...");
 		UserVO user = userDAO.getUser(vo);
-		if(userDAO.getUser(vo) != null) {
+		/* if(userDAO.getUser(vo) != null) {
 			session.setAttribute("userName", user.getName());
 			return "getBoardList.do";
 		}
 		else
-			return "login.jsp";
+			return "login.jsp"; */
+		
+		if(user != null) {
+			model.addAttribute("userID", user.getId());
+		}
+		return "index.jsp";
 	}
 }

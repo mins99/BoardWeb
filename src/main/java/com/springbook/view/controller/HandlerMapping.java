@@ -3,14 +3,6 @@ package com.springbook.view.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.springbook.view.board.DeleteBoardController;
-import com.springbook.view.board.GetBoardController;
-import com.springbook.view.board.GetBoardListController;
-import com.springbook.view.board.InsertBoardController;
-import com.springbook.view.board.UpdateBoardController;
-import com.springbook.view.user.LoginController;
-import com.springbook.view.user.LogoutController;
-
 public class HandlerMapping {
 	private Map<String, Controller> mappings;
 	
