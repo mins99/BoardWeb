@@ -39,3 +39,22 @@
     <!-- LocaleResolver 등록 -->
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
 ```
+
+## 6.4 Locale 변경하기
++ 언어를 변경하고 싶을 때 스프링에서 제공하는 LocaleChangeInterceptor 클래스를 사용.
++ LocaleChangeInterceptor : HandlerInterceptor 인터페이스를 구현한 클래스, 스프링 설정 파일에 인터셉터로 등록해야 함
+  + `<beans>` 루트 엘리먼트에 `<mvc:interceptors>` 추가 후 LocaleChangeInterceptor 등록
+  + LocaleChangeInterceptor 등록시 paramName 값인 lang 파라미터에 따라 언어 변경 가능
+```
+// presentation-layer.xml
+
+    <beans xmlns:mvc="http://www.springframework.org/schema/mvc"
+	    xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+	
+    <!-- LocaleChangeInterceptor 등록 -->
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="lang"/>
+        </bean>
+    </mvc:interceptors>
+```
