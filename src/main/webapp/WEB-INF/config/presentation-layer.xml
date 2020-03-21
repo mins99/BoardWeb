@@ -10,6 +10,9 @@
 		<!-- base-package 속성에 "com.springbook.view"를 등록하여 모든 Controller 클래스가 스캔 범위에 포함되도록 함 -->
 		<context:component-scan base-package="com.springbook.view"></context:component-scan>
 
+		<!-- JSON, XML 사용관련 MappingJackson2HttpConverter 설 -->
+		<mvc:annotation-driven></mvc:annotation-driven>
+		
 		<!-- 파일 업로드 설정 -->
 		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 			<property name="maxUploadSize" value="100000"></property>
